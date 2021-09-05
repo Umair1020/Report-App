@@ -1,3 +1,4 @@
+
 function Signup() {
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
@@ -11,9 +12,13 @@ function Signup() {
 
 
 function login() {
-
-    var email = document.getElementById("email1").value;
+    var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
+
+    // var name2 = localStorage.getItem("name2")
+    // if (name2) {
+    //   window.location.href= "Report.html"
+    // }
 
     var email1 = localStorage.getItem("email1")
     var password1 = localStorage.getItem("password1")
@@ -31,8 +36,9 @@ function login() {
     var password5 = localStorage.getItem("password5")
 
     if (email == email1 && password == password1) {
-        window.location.href = "Report.html";
-    } else if (email == email2 && password == password2) {
+        window.location.href = "Report.html"
+    }
+    else if (email == email2 && password == password2) {
         window.location.href = "Report.html";
     } else if (email == email4 && password == password4) {
         window.location.href = "Report.html";
@@ -42,7 +48,7 @@ function login() {
         window.location.href = "Report.html";
     }
     else {
-        alert("your email and password is incorrect")
+        alert("Your email and password is incorrect")
     };
 };
 $("#password12").on('click', function () {
@@ -60,13 +66,48 @@ $("#password12").on('click', function () {
 function tn() {
     var TeamName = $('#inp').val()
     // var Categories = $('#drop').val();
-    var Members = $('#email').val();
+    var Members = $('#email-1').val();
 
-    $('#table').append("<tr><td>"  + TeamName  +  "</td><td>" + "<br>"+"<br>" + Members +  "</td><td>");
+    localStorage.getItem("TeamName1")
+    localStorage.getItem("name2")
+
+    $('#table').append("<ul>" + TeamName + "</ul>" + "Members: " + Members + ` <input type="text" id="text1">
+    <button type="button" id="button1"  onclick="email();">Add</button>
+    <button type="button" id="button2"  onclick="display_array();">Remove</button>` );
     $("input[type=text], textarea").val("");
-    if(TeamName === ""){
-        alert("Enter your team name")
-     }else{
-    alert("enter successful")
-     }
+
+    localStorage.setItem("TeamName1", TeamName)
+}
+
+
+
+const logout = () => {
+    window.location.href = "index.html "
+}
+let x = 0;
+const array = Array();
+
+
+function email() {
+    array[x] = document.getElementById("text1").value;
+    alert(`Element: ${array[x]} Added at index ${x}`);
+    x++;
+    document.getElementById("text1").value = "";
+    let data = [
+        localStorage.getItem(obj1.email)
+    ]
+    $("#example").email_multiple({
+        data: data
+    })
+};
+
+
+
+function display_array() {
+    let e = "<hr/>";
+
+    for (let y = 0; y < array.length; y++) {
+        e += localStorage.setItem(`Element ${y} = ${array[y]}<br/>`);
+    }
+    document.getElementById("Result").innerHTML = e;
 }
