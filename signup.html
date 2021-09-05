@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script> -->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled JavaScript  -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Sign-Up</title>
+</head>
+
+<body class="bg-light">
+    <div class="container ">
+        <h1 class="text-center">Sign-UP</h1>
+        Name: <input type="text" id="name" class="form-control"> <br>
+        Email:<input type="email" class="form-control" id="email"> <br>
+        password:<input type="password" class="form-control" id="password">
+        <i class="fas fa-eye" id="password12" style="float: right; margin-top:-25px"></i>
+        <br>
+        <button type="button" class="form-control btn btn-primary" onclick="Signup()">Sign-UP</button> <br>
+
+        <a href="index.html" class="text-center d-block"> LogIn</a>
+    </div>
+
+<!-- <script type="module">
+
+        const firebaseConfig = {
+            apiKey: "...",
+            authDomain: "...",
+            projectId: "...",
+            storageBucket: "...",
+            messagingSenderId: "...",
+            appId: "1:374578068769:web:1a8eebffbba7965a60d260",
+            measurementId: "..."
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // firebase.App.initializeApp()
+        
+    </script> -->
+    <script>
+        const signinbtn = document.querySelector('.signinbtn');
+        const signupbtn = document.querySelector('.signupbtn');
+        const formbx = document.querySelector('.formbx');
+        const body = document.querySelector('body');
+        signupbtn.onclick = function(){
+            formbx.classList.add('active')
+            body.classList.add('active')
+        }
+        signinbtn.onclick = function(){
+            formbx.classList.remove('active')
+            formbx.classList.remove('active')
+        }
+    </script>
+<script src="app.js"></script>
+</body>
+
+</html>
