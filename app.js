@@ -90,7 +90,9 @@ function tn() {
             TeamName: TeamName,
             Members: Members,
         });
-       
+        document.getElementById("inp").innerHTML = user.TeamName;
+        document.getElementById("email-1").innerHTML = user.Members;
+        document.getElementById("welcome_box").style.display = "block";
     }
 }
 
