@@ -77,16 +77,18 @@ const setData = (user) => {
 
     });
 }
+
 function tn() {
     var TeamName = $('#inp').val()
     // var Categories = $('#drop').val();
     var Members = $('#email-1').val();
     if(user){
-        $('#table').append("<ul>" + TeamName + "</ul>" + "Members: " + Members + `<input type="text" id="text1">
+        $('#table').append("<ul>" + TeamName + "</ul>" + "Members: " + Members + ` <input type="text" id="text1">
         <button type="button" id="button1"  onclick="email();">Add</button>
-        <button type="button" id="button2"  onclick="display_array();">Remove</button>` );
+        <button type="button" id="button2"  onclick="display_array();">Remove</button>
+        ` );
         $("input[type=text], textarea").val("");
-         database.ref('Groups/' + TeamName).update({
+        database.ref('Groups/' + TeamName).update({
             TeamName: TeamName,
             Members: Members,
         });
@@ -95,7 +97,6 @@ function tn() {
         document.getElementById("welcome_box").style.display = "block";
     }
 }
-
 $(document).ready(function () {
     $("#password12").on('click', function () {
         var passwordField = $('#password')
