@@ -82,6 +82,23 @@ body {
     text-align: center;
     height: 25px;
   }
+.fb {
+      background-color: #3B5998;
+      color: rgb(255, 255, 255);
+      /* width: 30%; */
+    }
+    
+    .twitter {
+      background-color: #55ACEE;
+      color: white;
+      /* width: 50%; */
+    }
+    
+    .google {
+      background-color: #dd4b39;
+      color: white;
+      /* width: 30%; */
+    }
   h3{
     text-align: center;
   }
