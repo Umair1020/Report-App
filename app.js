@@ -86,7 +86,7 @@ function tn() {
         <button type="button" id="button1"  onclick="email();">Add</button>
         <button type="button" id="button2"  onclick="display_array();">Remove</button>` );
         $("input[type=text], textarea").val("");
-        database.ref('Groups/' + TeamName).update({
+         database.ref('Groups/' + TeamName).update({
             TeamName: TeamName,
             Members: Members,
         });
